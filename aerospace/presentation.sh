@@ -3,8 +3,8 @@
 # This script is used to change the top and bottom padding of the outer container in the Aerospace theme.
 
 presentation_pixel_gaps=300
-top_normal_pixel_gaps=52
-bottom_normal_pixel_gaps=10
+top_normal_pixel_gaps=82
+bottom_normal_pixel_gaps=40
 terminal_font_size=18
 terminal_presentation_font_size=22
 

@@ -37,12 +37,12 @@ key-mapping.preset = 'qwerty'
 
 [gaps]
 #outer.bottom numbers have to match presentation.sh variables. built-in retina display is excluded from presentation mode, so this only works on external monitors.
-outer.bottom =        [{monitor.'^built-in retina display$' = 10 }, 10]
-outer.top =        [{monitor.'^built-in retina display$' = 20 }, 52]
-outer.left =       13
-outer.right =      13
-inner.horizontal = 10
-inner.vertical =   10
+outer.bottom =        [{monitor.'^built-in retina display$' = 10 }, 40]
+outer.top =        [{monitor.'^built-in retina display$' = 20 }, 82]
+outer.left =       40
+outer.right =      40
+inner.horizontal = 40
+inner.vertical =   40
 
 [exec]                   # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true  # If you don't touch "exec" section,
@@ -105,6 +105,7 @@ cmd-shift-down = 'move down'
 cmd-shift-up = 'move up'
 cmd-shift-right = 'move right'
 
+#cmd-1 = 'summon-workspace 1'  # Notes
 cmd-1 = 'workspace --auto-back-and-forth 1'  # Notes
 cmd-2 = 'workspace --auto-back-and-forth 2'  # Terminal
 cmd-3 = 'workspace --auto-back-and-forth 3'  # Browser
@@ -152,6 +153,11 @@ esc = [
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 
+s = [
+    'exec-and-forget cat ~/.config/aerospace/shrugstring| pbcopy',
+   'exec-and-forget sketchybar --trigger hide_message',
+   'mode main'
+] 
 
 b = [
    'exec-and-forget ~/.config/aerospace/presentation.sh on',
